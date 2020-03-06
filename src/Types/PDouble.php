@@ -4,7 +4,7 @@
 namespace PCollection\Types;
 
 
-class PDouble
+class PDouble extends Object
 {
 
 }

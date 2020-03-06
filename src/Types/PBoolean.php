@@ -4,7 +4,7 @@
 namespace PCollection\Types;
 
 
-class PBoolean
+class PBoolean extends Object
 {
 
 }

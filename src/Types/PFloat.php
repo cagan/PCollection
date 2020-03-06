@@ -4,7 +4,7 @@
 namespace PCollection\Types;
 
 
-class PFloat
+class PFloat extends Object
 {
 
 }

@@ -1,5 +1,7 @@
 <?php
 
+use PCollection\Types\Object;
+
 class Collection implements Iterator, ArrayAccess
 {
 
@@ -62,36 +64,24 @@ class Collection implements Iterator, ArrayAccess
 }
 
 
-class Post {
-    protected $id;
+class Generics {
+    private $object;
+    private $type;
 
-    public function __construct($id)
+    public function __construct(Object $object, $type)
     {
-        $this->id = $id;
-    }
+        if ($object instanceof Object) {
+            $this->object = $object;
+        }
 
-    public function getId()
-    {
-        return $this->id;
+        $this->type = $type;
     }
 }
 
-
-$collection = new Collection();
-$collection[] = new Post(1);
-$collection[] = new Post(2);
-$collection[] = new Post(3);
-$collection[] = new Post(4);
-$collection[] = 'abc';
-
-foreach ($collection as $item) {
-    echo "{$item->getId()}\n";
+interface ListInterface {
+    public function add(Object $e);
 }
 
-class String {}
+class ArrayList implements ListInterface {
 
-class Integer {}
-
-class Double {}
-
-
+}

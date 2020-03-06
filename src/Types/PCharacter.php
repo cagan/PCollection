@@ -4,7 +4,7 @@
 namespace PCollection\Types;
 
 
-class PCharacter
+class PCharacter extends Object
 {
 
 }
